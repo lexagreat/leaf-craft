@@ -1,0 +1,183 @@
+$black: #323137;
+$white: #fff;
+$grey-100: #f5f6f8;
+$grey-200: #dcdcde;
+$grey-300: #d1d0d3;
+$grey-400: #b9b9bd;
+$grey-500: #8b8a90;
+$grey-600: #37363b;
+$yellow-100: #fff4dd;
+$yellow-200: #ffefcc;
+$yellow-300: #ffe9bb;
+$yellow-400: #ffe4aa;
+$yellow-500: #e6c888;
+$yellow-600: #cdac66;
+$blue-100: #c5cceb;
+$blue-200: #a7b2e2;
+$blue-300: #8a99d8;
+$blue-400: #6d7fce;
+$blue-500: #5867a8;
+$blue-600: #434f81;
+$red: #ff0033;
+$green: #76ff7a;
+$lilac-100: #ceb9cf;
+$lilac-200: #b597b6;
+$lilac-300: #9d749e;
+$lilac-400: #845186;
+$lilac-500: #6a416b;
+$lilac-600: #4f3150;
+$mint-100: #e5fde7;
+$mint-200: #d8fbdb;
+$mint-300: #cbfacf;
+$mint-400: #bef9c3;
+$mint-500: #9ae1a0;
+$mint-600: #77ca7e;
+
+$tablet: 1024px;
+$mobile: 568px;
+
+body {
+   font-family: "Open Sans", sans-serif;
+
+   --header: 161px;
+   --container: calc((100vw - 1240px) / 2);
+   --sectionMargin: 160px;
+   @media (max-width: 1440px) {
+      --container: 100px;
+   }
+   @media (max-width: $tablet) {
+      --header: 101px;
+      --container: 48px;
+      --sectionMargin: 100px;
+   }
+   @media (max-width: $mobile) {
+      --container: 16px;
+      --header: 100px;
+      --sectionMargin: 56px;
+   }
+}
+
+@mixin h1 {
+   font-weight: 700;
+   font-size: 60px;
+   line-height: 72px;
+   letter-spacing: -1%;
+   vertical-align: middle;
+}
+@mixin h1-mobile {
+   font-weight: 700;
+   font-size: 40px;
+   line-height: 44px;
+   letter-spacing: -1%;
+   vertical-align: middle;
+}
+@mixin h2 {
+   font-weight: 700;
+   font-size: 48px;
+   line-height: 56px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin h2-mobile {
+   font-weight: 700;
+   font-size: 36px;
+   line-height: 40px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin h3 {
+   font-weight: 700;
+   font-size: 40px;
+   line-height: 52px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin h3-mobile {
+   font-weight: 700;
+   font-size: 32px;
+   line-height: 44px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin h4 {
+   font-weight: 700;
+   font-size: 32px;
+   line-height: 40px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin h4-mobile {
+   font-weight: 700;
+   font-size: 28px;
+   line-height: 40px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin h5 {
+   font-weight: 700;
+   font-size: 28px;
+   line-height: 32px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin h5-mobile {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 32px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin h6 {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 28px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin h6-mobile {
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 24px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin title {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin title-mobile {
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 24px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin body {
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 24px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin body-mobile {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 20px;
+   letter-spacing: 0%;
+   vertical-align: middle;
+}
+@mixin caption {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 20px;
+   letter-spacing: 0%;
+}
+@mixin caption-mobile {
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 16px;
+   letter-spacing: 0%;
+}
