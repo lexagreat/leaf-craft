@@ -81,3 +81,13 @@
       transform: translateX(calc(-100% - var(--gap)));
    }
 }
+
+@keyframes scroll-rtl {
+   0% {
+      transform: translateX(calc(-100% - var(--gap)));
+   }
+
+   100% {
+      transform: translateX(0);
+   }
+}

@@ -1,0 +1,2466 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"lead craft",
+"description":"",
+"keywords":"",
+})
+<style>
+   .footer {
+      margin-top: 0 !important;
+   }
+</style>
+
+<body>
+   <div class="wrapper">
+      @@include('components/_header.html')
+      <main class="main">
+         <section class="breadcrumbs">
+            <div class="container">
+               <ul class="breadcrumbs__list scrollbar-none">
+                  <li>
+                     <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                     <a href="#">Contacts</a>
+                  </li>
+
+               </ul>
+            </div>
+         </section>
+         <section class="contacts-hero">
+            <img src="img/contacts/hero.png" alt="">
+            <div class="container">
+               <div class="contacts-hero__wrapper">
+                  <div class="contacts-hero__main">
+                     <div class="contacts-hero__info">
+                        <h1 class="h1 contacts-hero__title">
+                           Contacts
+                        </h1>
+                        <ul class="contacts-hero__list h6">
+                           <li>Fill out the form</li>
+                           <li>Wait for a response</li>
+                           <li>Take your business to the next level</li>
+                        </ul>
+                     </div>
+                     <div class="contacts-hero__item">
+                        <span class="h6">
+                           <img src="img/contacts/email.svg" alt="">
+                           Email
+                        </span>
+                        <p class="body-text">
+                           General questions: <a href="mailto:leadcraft@gmail.com">leadcraft@gmail.com</a>
+                        </p>
+                     </div>
+                     <div class="contacts-hero__item">
+                        <span class="h6">
+                           <img src="img/contacts/office.svg" alt="">
+                           Office addresses
+                        </span>
+                        <p class="body-text">
+                           Boston:
+                           200 Clarendon Street, Boston, MA 02116, USA
+                        </p>
+                     </div>
+                     <div class="contacts-hero__social">
+                        <ul class="google-side__links">
+                           <li>
+                              <a href="#" target="_blank">
+                                 <img src="img/blog/side1.svg" alt="">
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" target="_blank">
+                                 <img src="img/blog/side2.svg" alt="">
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" target="_blank">
+                                 <img src="img/blog/side3.svg" alt="">
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="contacts-hero__form contacts-form">
+                     <h3 class="h3 contacts-form__title">Free cosultation</h3>
+                     <ul class="contacts-form__inputs">
+                        <li>
+                           <!-- при валидвции надо добавить класс error к app-input -->
+                           <input class="app-input" type="text" placeholder="First Name*">
+                           <span>error text</span>
+                        </li>
+                        <li>
+                           <input class="app-input" type="text" placeholder="Last Name*">
+                           <span>error text</span>
+                        </li>
+                        <li>
+                           <input class="app-input" type="text" placeholder="Company/Organization*">
+                           <span>error text</span>
+                        </li>
+                        <li>
+                           <input class="app-input" type="text" placeholder="Website">
+                           <span>error text</span>
+                        </li>
+                        <li>
+                           <input class="app-input" type="text" placeholder="Email Address*">
+                        </li>
+                        <li style="position: relative;" class="phone-input">
+                           <div class="app-select phone-select" id="phone-select"></div>
+                           <input class="app-input" type="text" placeholder="555-44-5555" data-phone>
+                        </li>
+                        <li>
+                           <input class="app-input" type="text" placeholder="Company Size*">
+                        </li>
+                        <li>
+                           <input class="app-input" type="text" placeholder="How did you hear about us?">
+                        </li>
+                     </ul>
+                     <ul class="contacts-form__checks">
+
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>SEO</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>PPC</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Socila Media Organic</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Social Media Ads</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>CRO</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>ORM</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Reputation/Review</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Local SEO</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Content Writing</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Photography/Video</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Web Hosting</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Amazon Marketing</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Email Marketing</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>ADA Compliance</span>
+                           </label></li>
+                        <li><label class="app-checkbox"> <input type="checkbox" name="contacts" value="0">
+                              <div><img src="img/icons/nike.svg" alt=""></div><span>Link Building</span>
+                           </label></li>
+                     </ul>
+                     <div class="contacts-form__textarea">
+                        <textarea name="" id="" class="app-input" placeholder="Tell us about your business"></textarea>
+                     </div>
+                     <button class="btn contacts-form__btn">Send me free proposal</button>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="home-awards">
+            <div class="container">
+               <div class="home-awards__wrapper">
+                  <div class="home-awards__header">
+                     <h2 class="h2 home-awards__title h2">
+                        Achievements and awwards
+                     </h2>
+                     <p class="home-awards__text body-text">
+                        We are honored to share our industry achievements with you. We dedicate ourselves to projects we
+                        genuinely believe in, and it’s incredibly rewarding to receive positive feedback and reviews
+                        from our clients.
+                     </p>
+                  </div>
+                  <ul class="home-awards__main">
+                     <li>
+                        <img src="img/home/award1.png" alt="">
+                     </li>
+                     <li>
+                        <img src="img/home/award2.png" alt="">
+                     </li>
+                     <li>
+                        <img src="img/home/award3.png" alt="">
+                     </li>
+                     <li>
+                        <img src="img/home/award4.png" alt="">
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+         <section class="cases-section">
+            <div class="container">
+               <div class="cases-section__wrapper">
+                  <div class="cases-section__header">
+                     <h3 class="h3 cases-section__title">See Our Work in Action</h3>
+                     <p class="cases-section__description body-text">Lorem ipsum ac pellentesque faucibus quam mattis
+                        iaculis feugiat venenatis nullam sed elementum faucibus quis convallis diam ut quam maecenas
+                        lacus sagittis nisl quis quam gravida </p>
+                     <div class="cases-section__contorl">
+                        <div class="swiper-pagination"></div>
+                        <ul>
+                           <button class="prev">
+                              <img src="img/icons/slider-btn-left.svg" alt="">
+                           </button>
+                           <button class="next">
+                              <img src="img/icons/slider-btn-left.svg" alt="" style="rotate: 180deg;">
+                           </button>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="cases-section__main">
+                     <div class="cases-section__list">
+                        <div class="cases-section__item case-card">
+                           <div class="case-card__header">
+                              <img src="img/home/case-image.png" alt="">
+                              <div class="case-card__logo">
+                                 <img src="img/home/case-logo.svg" alt="">
+                                 <a href="#" class="case-card__link caption" target="_blank">
+                                    FishAndCaviar.com
+                                 </a>
+                              </div>
+                              <span class="case-card__title title">
+                                 Fish&Caviar: from scratch <br>
+                                 to Top-3 in the USA
+                              </span>
+                           </div>
+                           <ul class="case-card__info">
+                              <li class="case-card__items">
+                                 <ul>
+                                    <li>
+                                       <span>Theme</span><span>E-commerce</span>
+                                    </li>
+                                    <li>
+                                       <span>Service</span><span>SEO promotion</span>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class="case-card__items">
+                                 <ul>
+                                    <li>
+                                       <span>Goal</span>
+                                       <span>Increase traffic</span>
+                                    </li>
+                                    <li>
+                                       <span>Result</span>
+                                       <span style="color: #845186;font-weight: 700;">Increased traffic by 500%</span>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <div class="case-card__main">
+                              <div class="swiper-pagination"></div>
+                              <div class="swiper">
+                                 <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                       <div class="case-card__graph case-graph">
+                                          <div class="case-graph__header">
+                                             <span>Position</span>
+                                             <ul>
+                                                <li>
+                                                   <div class="circle" style="background-color: #EDF0F9;">
+                                                      <div class="circle" style="background-color: #6D7FCE;"></div>
+                                                   </div>
+                                                   <span>Safari</span>
+                                                </li>
+                                                <li>
+                                                   <div class="circle" style="background-color: #FAF4E7;">
+                                                      <div class="circle" style="background-color: #FFE4AA;"></div>
+                                                   </div>
+                                                   <span>Google</span>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                          <canvas id="myChart0"></canvas>
+                                       </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <div class="case-table">
+                                          <div class="case-table__logo">
+                                             <img src="img/home/google.svg" alt="">
+                                          </div>
+                                          <div class="case-table__grid">
+                                             <div class="case-table__cats">
+                                                <span>Request</span><span>Frequency</span><span>Positions</span>
+                                             </div>
+                                             <ul class="case-table__items">
+                                                <li>
+                                                   <span>Online courses</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Courses</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Education</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Online education</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <div class="case-card__review case-review">
+                                          <div class="case-review__author">
+                                             <div class="circle case-review__avatar">
+                                                <img src="img/home/case-review.png" alt="">
+                                             </div>
+                                             <div class="case-review__info">
+                                                <span>Kale Geen</span>
+                                                <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                      Line</a></span>
+                                             </div>
+                                          </div>
+                                          <div class="case-review__rating">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                          </div>
+                                          <div class="case-review__main">
+
+                                             <span class="title">GREAT AGENCY</span>
+                                             <p class="caption">
+                                                Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                                purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                                purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <a href="#" class="btn white">See case</a>
+                           </div>
+                        </div>
+                        <div class="cases-section__item case-card">
+                           <div class="case-card__header">
+                              <img src="img/home/case-image.png" alt="">
+                              <div class="case-card__logo">
+                                 <img src="img/home/case-logo.svg" alt="">
+                                 <a href="#" class="case-card__link caption" target="_blank">
+                                    FishAndCaviar.com
+                                 </a>
+                              </div>
+                              <span class="case-card__title title">
+                                 Fish&Caviar: from scratch <br>
+                                 to Top-3 in the USA
+                              </span>
+                           </div>
+                           <ul class="case-card__info">
+                              <li class="case-card__items">
+                                 <ul>
+                                    <li>
+                                       <span>Theme</span><span>E-commerce</span>
+                                    </li>
+                                    <li>
+                                       <span>Service</span><span>SEO promotion</span>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class="case-card__items">
+                                 <ul>
+                                    <li>
+                                       <span>Goal</span>
+                                       <span>Increase traffic</span>
+                                    </li>
+                                    <li>
+                                       <span>Result</span>
+                                       <span style="color: #845186;font-weight: 700;">Increased traffic by 500%</span>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <div class="case-card__main">
+                              <div class="swiper-pagination"></div>
+                              <div class="swiper">
+                                 <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                       <div class="case-card__graph case-graph">
+                                          <div class="case-graph__header">
+                                             <span>Position</span>
+                                             <ul>
+                                                <li>
+                                                   <div class="circle" style="background-color: #EDF0F9;">
+                                                      <div class="circle" style="background-color: #6D7FCE;"></div>
+                                                   </div>
+                                                   <span>Safari</span>
+                                                </li>
+                                                <li>
+                                                   <div class="circle" style="background-color: #FAF4E7;">
+                                                      <div class="circle" style="background-color: #FFE4AA;"></div>
+                                                   </div>
+                                                   <span>Google</span>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                          <canvas id="myChart1"></canvas>
+                                       </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <div class="case-table">
+                                          <div class="case-table__logo">
+                                             <img src="img/home/google.svg" alt="">
+                                          </div>
+                                          <div class="case-table__grid">
+                                             <div class="case-table__cats">
+                                                <span>Request</span><span>Frequency</span><span>Positions</span>
+                                             </div>
+                                             <ul class="case-table__items">
+                                                <li>
+                                                   <span>Online courses</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Courses</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Education</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Online education</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <div class="case-card__review case-review">
+                                          <div class="case-review__author">
+                                             <div class="circle case-review__avatar">
+                                                <img src="img/home/case-review.png" alt="">
+                                             </div>
+                                             <div class="case-review__info">
+                                                <span>Kale Geen</span>
+                                                <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                      Line</a></span>
+                                             </div>
+                                          </div>
+                                          <div class="case-review__rating">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                          </div>
+                                          <div class="case-review__main">
+
+                                             <span class="title">GREAT AGENCY</span>
+                                             <p class="caption">
+                                                Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                                purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                                purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <a href="#" class="btn white">See case</a>
+                           </div>
+                        </div>
+                        <div class="cases-section__item case-card">
+                           <div class="case-card__header">
+                              <img src="img/home/case-image.png" alt="">
+                              <div class="case-card__logo">
+                                 <img src="img/home/case-logo.svg" alt="">
+                                 <a href="#" class="case-card__link caption" target="_blank">
+                                    FishAndCaviar.com
+                                 </a>
+                              </div>
+                              <span class="case-card__title title">
+                                 Fish&Caviar: from scratch <br>
+                                 to Top-3 in the USA
+                              </span>
+                           </div>
+                           <ul class="case-card__info">
+                              <li class="case-card__items">
+                                 <ul>
+                                    <li>
+                                       <span>Theme</span><span>E-commerce</span>
+                                    </li>
+                                    <li>
+                                       <span>Service</span><span>SEO promotion</span>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class="case-card__items">
+                                 <ul>
+                                    <li>
+                                       <span>Goal</span>
+                                       <span>Increase traffic</span>
+                                    </li>
+                                    <li>
+                                       <span>Result</span>
+                                       <span style="color: #845186;font-weight: 700;">Increased traffic by 500%</span>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <div class="case-card__main">
+                              <div class="swiper-pagination"></div>
+                              <div class="swiper">
+                                 <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                       <div class="case-card__graph case-graph">
+                                          <div class="case-graph__header">
+                                             <span>Position</span>
+                                             <ul>
+                                                <li>
+                                                   <div class="circle" style="background-color: #EDF0F9;">
+                                                      <div class="circle" style="background-color: #6D7FCE;"></div>
+                                                   </div>
+                                                   <span>Safari</span>
+                                                </li>
+                                                <li>
+                                                   <div class="circle" style="background-color: #FAF4E7;">
+                                                      <div class="circle" style="background-color: #FFE4AA;"></div>
+                                                   </div>
+                                                   <span>Google</span>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                          <canvas id="myChart2"></canvas>
+                                       </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <div class="case-table">
+                                          <div class="case-table__logo">
+                                             <img src="img/home/google.svg" alt="">
+                                          </div>
+                                          <div class="case-table__grid">
+                                             <div class="case-table__cats">
+                                                <span>Request</span><span>Frequency</span><span>Positions</span>
+                                             </div>
+                                             <ul class="case-table__items">
+                                                <li>
+                                                   <span>Online courses</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Courses</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Education</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Online education</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <div class="case-card__review case-review">
+                                          <div class="case-review__author">
+                                             <div class="circle case-review__avatar">
+                                                <img src="img/home/case-review.png" alt="">
+                                             </div>
+                                             <div class="case-review__info">
+                                                <span>Kale Geen</span>
+                                                <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                      Line</a></span>
+                                             </div>
+                                          </div>
+                                          <div class="case-review__rating">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                          </div>
+                                          <div class="case-review__main">
+
+                                             <span class="title">GREAT AGENCY</span>
+                                             <p class="caption">
+                                                Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                                purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                                purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <a href="#" class="btn white">See case</a>
+                           </div>
+                        </div>
+                        <div class="cases-section__item case-card">
+                           <div class="case-card__header">
+                              <img src="img/home/case-image.png" alt="">
+                              <div class="case-card__logo">
+                                 <img src="img/home/case-logo.svg" alt="">
+                                 <a href="#" class="case-card__link caption" target="_blank">
+                                    FishAndCaviar.com
+                                 </a>
+                              </div>
+                              <span class="case-card__title title">
+                                 Fish&Caviar: from scratch <br>
+                                 to Top-3 in the USA
+                              </span>
+                           </div>
+                           <ul class="case-card__info">
+                              <li class="case-card__items">
+                                 <ul>
+                                    <li>
+                                       <span>Theme</span><span>E-commerce</span>
+                                    </li>
+                                    <li>
+                                       <span>Service</span><span>SEO promotion</span>
+                                    </li>
+                                 </ul>
+                              </li>
+                              <li class="case-card__items">
+                                 <ul>
+                                    <li>
+                                       <span>Goal</span>
+                                       <span>Increase traffic</span>
+                                    </li>
+                                    <li>
+                                       <span>Result</span>
+                                       <span style="color: #845186;font-weight: 700;">Increased traffic by 500%</span>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                           <div class="case-card__main">
+                              <div class="swiper-pagination"></div>
+                              <div class="swiper">
+                                 <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                       <div class="case-card__graph case-graph">
+                                          <div class="case-graph__header">
+                                             <span>Position</span>
+                                             <ul>
+                                                <li>
+                                                   <div class="circle" style="background-color: #EDF0F9;">
+                                                      <div class="circle" style="background-color: #6D7FCE;"></div>
+                                                   </div>
+                                                   <span>Safari</span>
+                                                </li>
+                                                <li>
+                                                   <div class="circle" style="background-color: #FAF4E7;">
+                                                      <div class="circle" style="background-color: #FFE4AA;"></div>
+                                                   </div>
+                                                   <span>Google</span>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                          <canvas id="myChart3"></canvas>
+                                       </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <div class="case-table">
+                                          <div class="case-table__logo">
+                                             <img src="img/home/google.svg" alt="">
+                                          </div>
+                                          <div class="case-table__grid">
+                                             <div class="case-table__cats">
+                                                <span>Request</span><span>Frequency</span><span>Positions</span>
+                                             </div>
+                                             <ul class="case-table__items">
+                                                <li>
+                                                   <span>Online courses</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Courses</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Education</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <span>Online education</span><span>2378</span>
+                                                   <div>
+                                                      <span>64</span>
+                                                      <span>99</span>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                       <div class="case-card__review case-review">
+                                          <div class="case-review__author">
+                                             <div class="circle case-review__avatar">
+                                                <img src="img/home/case-review.png" alt="">
+                                             </div>
+                                             <div class="case-review__info">
+                                                <span>Kale Geen</span>
+                                                <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                      Line</a></span>
+                                             </div>
+                                          </div>
+                                          <div class="case-review__rating">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                             <img src="img/icons/star.svg" alt="">
+                                          </div>
+                                          <div class="case-review__main">
+
+                                             <span class="title">GREAT AGENCY</span>
+                                             <p class="caption">
+                                                Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                                purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                                purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <a href="#" class="btn white">See case</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="cases-section__item case-card">
+                                 <div class="case-card__header">
+                                    <img src="img/home/case-image.png" alt="">
+                                    <div class="case-card__logo">
+                                       <img src="img/home/case-logo.svg" alt="">
+                                       <a href="#" class="case-card__link caption" target="_blank">
+                                          FishAndCaviar.com
+                                       </a>
+                                    </div>
+                                    <span class="case-card__title title">
+                                       Fish&Caviar: from scratch <br>
+                                       to Top-3 in the USA
+                                    </span>
+                                 </div>
+                                 <ul class="case-card__info">
+                                    <li class="case-card__items">
+                                       <ul>
+                                          <li>
+                                             <span>Theme</span><span>E-commerce</span>
+                                          </li>
+                                          <li>
+                                             <span>Service</span><span>SEO promotion</span>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="case-card__items">
+                                       <ul>
+                                          <li>
+                                             <span>Goal</span>
+                                             <span>Increase traffic</span>
+                                          </li>
+                                          <li>
+                                             <span>Result</span>
+                                             <span style="color: #845186;font-weight: 700;">Increased traffic by
+                                                500%</span>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                                 <div class="case-card__main">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper">
+                                       <div class="swiper-wrapper">
+                                          <div class="swiper-slide">
+                                             <div class="case-card__graph case-graph">
+                                                <div class="case-graph__header">
+                                                   <span>Position</span>
+                                                   <ul>
+                                                      <li>
+                                                         <div class="circle" style="background-color: #EDF0F9;">
+                                                            <div class="circle" style="background-color: #6D7FCE;">
+                                                            </div>
+                                                         </div>
+                                                         <span>Safari</span>
+                                                      </li>
+                                                      <li>
+                                                         <div class="circle" style="background-color: #FAF4E7;">
+                                                            <div class="circle" style="background-color: #FFE4AA;">
+                                                            </div>
+                                                         </div>
+                                                         <span>Google</span>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                                <canvas id="myChart2-mobile"></canvas>
+                                             </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                             <div class="case-table">
+                                                <div class="case-table__logo">
+                                                   <img src="img/home/google.svg" alt="">
+                                                </div>
+                                                <div class="case-table__grid">
+                                                   <div class="case-table__cats">
+                                                      <span>Request</span><span>Frequency</span><span>Positions</span>
+                                                   </div>
+                                                   <ul class="case-table__items">
+                                                      <li>
+                                                         <span>Online courses</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Courses</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Education</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Online education</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                             <div class="case-card__review case-review">
+                                                <div class="case-review__author">
+                                                   <div class="circle case-review__avatar">
+                                                      <img src="img/home/case-review.png" alt="">
+                                                   </div>
+                                                   <div class="case-review__info">
+                                                      <span>Kale Geen</span>
+                                                      <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                            Line</a></span>
+                                                   </div>
+                                                </div>
+                                                <div class="case-review__rating">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                </div>
+                                                <div class="case-review__main">
+
+                                                   <span class="title">GREAT AGENCY</span>
+                                                   <p class="caption">
+                                                      Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam
+                                                      enim
+                                                      purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                      Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam
+                                                      enim
+                                                      purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                   </p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <a href="#" class="btn white">See case</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="cases-section__item case-card">
+                                 <div class="case-card__header">
+                                    <img src="img/home/case-image.png" alt="">
+                                    <div class="case-card__logo">
+                                       <img src="img/home/case-logo.svg" alt="">
+                                       <a href="#" class="case-card__link caption" target="_blank">
+                                          FishAndCaviar.com
+                                       </a>
+                                    </div>
+                                    <span class="case-card__title title">
+                                       Fish&Caviar: from scratch <br>
+                                       to Top-3 in the USA
+                                    </span>
+                                 </div>
+                                 <ul class="case-card__info">
+                                    <li class="case-card__items">
+                                       <ul>
+                                          <li>
+                                             <span>Theme</span><span>E-commerce</span>
+                                          </li>
+                                          <li>
+                                             <span>Service</span><span>SEO promotion</span>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="case-card__items">
+                                       <ul>
+                                          <li>
+                                             <span>Goal</span>
+                                             <span>Increase traffic</span>
+                                          </li>
+                                          <li>
+                                             <span>Result</span>
+                                             <span style="color: #845186;font-weight: 700;">Increased traffic by
+                                                500%</span>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                                 <div class="case-card__main">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper">
+                                       <div class="swiper-wrapper">
+                                          <div class="swiper-slide">
+                                             <div class="case-card__graph case-graph">
+                                                <div class="case-graph__header">
+                                                   <span>Position</span>
+                                                   <ul>
+                                                      <li>
+                                                         <div class="circle" style="background-color: #EDF0F9;">
+                                                            <div class="circle" style="background-color: #6D7FCE;">
+                                                            </div>
+                                                         </div>
+                                                         <span>Safari</span>
+                                                      </li>
+                                                      <li>
+                                                         <div class="circle" style="background-color: #FAF4E7;">
+                                                            <div class="circle" style="background-color: #FFE4AA;">
+                                                            </div>
+                                                         </div>
+                                                         <span>Google</span>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                                <canvas id="myChart0-mobile"></canvas>
+                                             </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                             <div class="case-table">
+                                                <div class="case-table__logo">
+                                                   <img src="img/home/google.svg" alt="">
+                                                </div>
+                                                <div class="case-table__grid">
+                                                   <div class="case-table__cats">
+                                                      <span>Request</span><span>Frequency</span><span>Positions</span>
+                                                   </div>
+                                                   <ul class="case-table__items">
+                                                      <li>
+                                                         <span>Online courses</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Courses</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Education</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Online education</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                             <div class="case-card__review case-review">
+                                                <div class="case-review__author">
+                                                   <div class="circle case-review__avatar">
+                                                      <img src="img/home/case-review.png" alt="">
+                                                   </div>
+                                                   <div class="case-review__info">
+                                                      <span>Kale Geen</span>
+                                                      <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                            Line</a></span>
+                                                   </div>
+                                                </div>
+                                                <div class="case-review__rating">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                </div>
+                                                <div class="case-review__main">
+
+                                                   <span class="title">GREAT AGENCY</span>
+                                                   <p class="caption">
+                                                      Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam
+                                                      enim
+                                                      purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                      Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam
+                                                      enim
+                                                      purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                   </p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <a href="#" class="btn white">See case</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="cases-section__item case-card">
+                                 <div class="case-card__header">
+                                    <img src="img/home/case-image.png" alt="">
+                                    <div class="case-card__logo">
+                                       <img src="img/home/case-logo.svg" alt="">
+                                       <a href="#" class="case-card__link caption" target="_blank">
+                                          FishAndCaviar.com
+                                       </a>
+                                    </div>
+                                    <span class="case-card__title title">
+                                       Fish&Caviar: from scratch <br>
+                                       to Top-3 in the USA
+                                    </span>
+                                 </div>
+                                 <ul class="case-card__info">
+                                    <li class="case-card__items">
+                                       <ul>
+                                          <li>
+                                             <span>Theme</span><span>E-commerce</span>
+                                          </li>
+                                          <li>
+                                             <span>Service</span><span>SEO promotion</span>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="case-card__items">
+                                       <ul>
+                                          <li>
+                                             <span>Goal</span>
+                                             <span>Increase traffic</span>
+                                          </li>
+                                          <li>
+                                             <span>Result</span>
+                                             <span style="color: #845186;font-weight: 700;">Increased traffic by
+                                                500%</span>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                                 <div class="case-card__main">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper">
+                                       <div class="swiper-wrapper">
+                                          <div class="swiper-slide">
+                                             <div class="case-card__graph case-graph">
+                                                <div class="case-graph__header">
+                                                   <span>Position</span>
+                                                   <ul>
+                                                      <li>
+                                                         <div class="circle" style="background-color: #EDF0F9;">
+                                                            <div class="circle" style="background-color: #6D7FCE;">
+                                                            </div>
+                                                         </div>
+                                                         <span>Safari</span>
+                                                      </li>
+                                                      <li>
+                                                         <div class="circle" style="background-color: #FAF4E7;">
+                                                            <div class="circle" style="background-color: #FFE4AA;">
+                                                            </div>
+                                                         </div>
+                                                         <span>Google</span>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                                <canvas id="myChart1-mobile"></canvas>
+                                             </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                             <div class="case-table">
+                                                <div class="case-table__logo">
+                                                   <img src="img/home/google.svg" alt="">
+                                                </div>
+                                                <div class="case-table__grid">
+                                                   <div class="case-table__cats">
+                                                      <span>Request</span><span>Frequency</span><span>Positions</span>
+                                                   </div>
+                                                   <ul class="case-table__items">
+                                                      <li>
+                                                         <span>Online courses</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Courses</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Education</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Online education</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                             <div class="case-card__review case-review">
+                                                <div class="case-review__author">
+                                                   <div class="circle case-review__avatar">
+                                                      <img src="img/home/case-review.png" alt="">
+                                                   </div>
+                                                   <div class="case-review__info">
+                                                      <span>Kale Geen</span>
+                                                      <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                            Line</a></span>
+                                                   </div>
+                                                </div>
+                                                <div class="case-review__rating">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                </div>
+                                                <div class="case-review__main">
+
+                                                   <span class="title">GREAT AGENCY</span>
+                                                   <p class="caption">
+                                                      Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam
+                                                      enim
+                                                      purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                      Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam
+                                                      enim
+                                                      purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                   </p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <a href="#" class="btn white">See case</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="cases-section__item case-card">
+                                 <div class="case-card__header">
+                                    <img src="img/home/case-image.png" alt="">
+                                    <div class="case-card__logo">
+                                       <img src="img/home/case-logo.svg" alt="">
+                                       <a href="#" class="case-card__link caption" target="_blank">
+                                          FishAndCaviar.com
+                                       </a>
+                                    </div>
+                                    <span class="case-card__title title">
+                                       Fish&Caviar: from scratch <br>
+                                       to Top-3 in the USA
+                                    </span>
+                                 </div>
+                                 <ul class="case-card__info">
+                                    <li class="case-card__items">
+                                       <ul>
+                                          <li>
+                                             <span>Theme</span><span>E-commerce</span>
+                                          </li>
+                                          <li>
+                                             <span>Service</span><span>SEO promotion</span>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li class="case-card__items">
+                                       <ul>
+                                          <li>
+                                             <span>Goal</span>
+                                             <span>Increase traffic</span>
+                                          </li>
+                                          <li>
+                                             <span>Result</span>
+                                             <span style="color: #845186;font-weight: 700;">Increased traffic by
+                                                500%</span>
+                                          </li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                                 <div class="case-card__main">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper">
+                                       <div class="swiper-wrapper">
+                                          <div class="swiper-slide">
+                                             <div class="case-card__graph case-graph">
+                                                <div class="case-graph__header">
+                                                   <span>Position</span>
+                                                   <ul>
+                                                      <li>
+                                                         <div class="circle" style="background-color: #EDF0F9;">
+                                                            <div class="circle" style="background-color: #6D7FCE;">
+                                                            </div>
+                                                         </div>
+                                                         <span>Safari</span>
+                                                      </li>
+                                                      <li>
+                                                         <div class="circle" style="background-color: #FAF4E7;">
+                                                            <div class="circle" style="background-color: #FFE4AA;">
+                                                            </div>
+                                                         </div>
+                                                         <span>Google</span>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                                <canvas id="myChart3-mobile"></canvas>
+                                             </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                             <div class="case-table">
+                                                <div class="case-table__logo">
+                                                   <img src="img/home/google.svg" alt="">
+                                                </div>
+                                                <div class="case-table__grid">
+                                                   <div class="case-table__cats">
+                                                      <span>Request</span><span>Frequency</span><span>Positions</span>
+                                                   </div>
+                                                   <ul class="case-table__items">
+                                                      <li>
+                                                         <span>Online courses</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Courses</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Education</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                      <li>
+                                                         <span>Online education</span><span>2378</span>
+                                                         <div>
+                                                            <span>64</span>
+                                                            <span>99</span>
+                                                         </div>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="swiper-slide">
+                                             <div class="case-card__review case-review">
+                                                <div class="case-review__author">
+                                                   <div class="circle case-review__avatar">
+                                                      <img src="img/home/case-review.png" alt="">
+                                                   </div>
+                                                   <div class="case-review__info">
+                                                      <span>Kale Geen</span>
+                                                      <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                            Line</a></span>
+                                                   </div>
+                                                </div>
+                                                <div class="case-review__rating">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                   <img src="img/icons/star.svg" alt="">
+                                                </div>
+                                                <div class="case-review__main">
+
+                                                   <span class="title">GREAT AGENCY</span>
+                                                   <p class="caption">
+                                                      Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam
+                                                      enim
+                                                      purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                      Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam
+                                                      enim
+                                                      purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                                   </p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <a href="#" class="btn white">See case</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+
+                     </div>
+                  </div>
+                  <a href="#" class="btn cases-section__link">
+                     See all cases
+                     <svg style="rotate: -90deg;" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10.5L12.0008 15.08L17 10.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                     </svg>
+
+                  </a>
+               </div>
+            </div>
+         </section>
+         <section class="home-reviews">
+            <div class="container">
+               <div class="home-reviews__header">
+                  <h2 class="h2 home-reviews__title">What Our Clients Are Saying</h2>
+                  <ul class="home-about__list">
+                     <li class="home-about__item">
+                        <div class="home-about__subhead">
+                           <span class="h5">160,000 + </span>
+                        </div>
+                        <p class="home-about__text body-text" style="font-size: 18px;">
+                           Reviews
+                        </p>
+                     </li>
+                     <li class="home-about__item">
+                        <div class="home-about__subhead">
+                           <span class="h5">4.9 </span>
+                           <ul class="home-about__rating">
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                           </ul>
+                        </div>
+                        <p class="home-about__text body-text" style="font-size: 18px;">
+                           On Chrome Store
+                        </p>
+                     </li>
+                     <li class="home-about__item">
+                        <div class="home-about__subhead">
+                           <span class="h5">4.9 </span>
+                           <ul class="home-about__rating">
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                              <li>
+                                 <img src="img/home/about-star.svg" alt="">
+                              </li>
+                           </ul>
+                        </div>
+                        <p class="home-about__text body-text" style="font-size: 18px;">
+                           On Product Hunt
+                        </p>
+                     </li>
+
+                     <li class="home-about__item">
+                        <div class="home-about__subhead">
+                           <span class="h5">10,000 </span>
+                        </div>
+                        <p class="home-about__text body-text" style="font-size: 18px;">
+                           Users
+                        </p>
+                     </li>
+
+                  </ul>
+               </div>
+            </div>
+            <div class="home-reviews__lentas">
+               <div class="runeline">
+                  <div class="marquee-0">
+                     <div class="marquee marquee-b2b">
+                        <div class="marquee__group">
+
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+
+                        </div>
+                        <div aria-hidden="true" class="marquee__group">
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+
+                        </div>
+                     </div>
+
+
+                  </div>
+               </div>
+               <div class="runeline rtl">
+                  <div class="marquee-0">
+                     <div class="marquee marquee-b2b">
+                        <div class="marquee__group">
+
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+
+                        </div>
+                        <div aria-hidden="true" class="marquee__group">
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="running-line__item">
+                              <div>
+                                 <div class="case-card__review case-review">
+                                    <div class="case-review__author">
+                                       <div class="circle case-review__avatar">
+                                          <img src="img/home/case-review.png" alt="">
+                                       </div>
+                                       <div class="case-review__info">
+                                          <span>Kale Geen</span>
+                                          <span>CEO – <a href="#" target="_blank">Accurate Leak and
+                                                Line</a></span>
+                                       </div>
+                                    </div>
+                                    <div class="case-review__rating">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                       <img src="img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="case-review__main">
+
+                                       <span class="title">GREAT AGENCY</span>
+                                       <p class="caption">
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                          Lorem ipsum ante nec nascetur et nisl mattis rhoncus nulla aliquam enim
+                                          purus faucibus ut elementum facilisis scelerisque fringilla in.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+
+                        </div>
+                     </div>
+
+
+                  </div>
+               </div>
+            </div>
+            <a href="#" class="btn">
+               See all testimonials
+            </a>
+         </section>
+         <section class="home-full">
+            <div class="container">
+               <div class="home-full__wrapper">
+                  <div class="home-full__main">
+                     <h3 class="h3 home-full__title">
+                        Take full control over your projects
+
+                     </h3>
+                     <p class="home-full__text body-text">
+                        Lorem ipsum laoreet amet a nisi odio volutpat risus lectus leo diam libero augue nunc velit sed
+                        diam mattis maecenas est lorem nunc feugiat bibendum enim vulputate in eget .
+                     </p>
+                  </div>
+                  <div class="home-full__form">
+                     <div class="home-full__item">
+                        <span>Your challenge*</span>
+                        <div class="app-select" id="full-control-select"></div>
+                     </div>
+                     <div class="home-full__item">
+                        <span> Your email*</span>
+                        <input type="text" class="app-input" placeholder="Enter your email">
+                     </div>
+                     <button class="btn">Get a free proposal</button>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('components/_footer.html')
+
+   </div>
+   @@include('components/_scripts.html')
+   <script>
+
+      let select = new Select('#phone-select', {
+         placeholder: "Select your challenge",
+         selectedId: "c1",
+         data: [
+            {
+               id: "c1",
+               value: "+1",
+               image: "img/contacts/usa.svg"
+            },
+            {
+               id: "c2",
+               value: "+2",
+               image: "img/contacts/usa.svg"
+            },
+            {
+               id: "c3",
+               value: "+3",
+               image: "img/contacts/usa.svg"
+            },
+         ],
+         onSelect(item, select) {
+            select.classList.add("filled");
+         },
+      })
+
+
+      const cases = document.querySelectorAll('.case-card')
+      cases.forEach(item => {
+
+         new Swiper(item.querySelector(".swiper"), {
+            slidesPerView: 1,
+            // initialSlide: 2,
+            spaceBetween: 32,
+            pagination: {
+               el: item.querySelector(".swiper-pagination"),
+               clickable: true
+            }
+         })
+
+      })
+      new Swiper('.cases-section__main >.swiper', {
+         slidesPerView: 'auto',
+         spaceBetween: 20,
+         pagination: {
+            el: `.cases-section__header .swiper-pagination`,
+            type: "progressbar",
+         },
+         navigation: {
+            prevEl: ".cases-section__header .prev",
+            nextEl: ".cases-section__header .next",
+         }
+      })
+
+      let opts = {
+         type: 'line',
+         data: {
+            labels: ['March 14', 'May 14', 'July 14', 'Sep 14', 'Jan 14'],
+            datasets: [{
+               // label: 'My First Dataset',
+               data: [0, 160, 130, 250, 500],
+               fill: false,
+               borderColor: '#8A99D8',
+               tension: 0.4,
+
+               pointRadius: 0 // Убираем точки
+            }, {
+               // label: 'My First Dataset',
+               data: [0, 120, 130, 50, 450],
+               fill: false,
+               borderColor: '#FFE4AA',
+               tension: 0.4,
+
+               pointRadius: 0 // Убираем точки
+            },]
+         },
+         options: {
+            plugins: {
+               legend: {
+                  display: false // Отключает отображение легенды
+               }
+            },
+            responsive: true,
+            scales: {
+               x: {
+                  type: 'category',
+                  ticks: {
+                     autoSkip: true,
+                  }
+               },
+               y: {
+                  beginAtZero: true,
+                  ticks: {
+                     // maxTicksLimit: 4,
+                     stepSize: 100, // Устанавливаем шаг между делениями
+                  }
+               }
+
+            },
+         }
+      }
+      new Chart(document.getElementById('myChart0'), opts);
+      new Chart(document.getElementById('myChart1'), opts);
+      new Chart(document.getElementById('myChart2'), opts);
+      new Chart(document.getElementById('myChart3'), opts);
+      new Chart(document.getElementById('myChart0-mobile'), opts);
+      new Chart(document.getElementById('myChart1-mobile'), opts);
+      new Chart(document.getElementById('myChart2-mobile'), opts);
+      new Chart(document.getElementById('myChart3-mobile'), opts);
+   </script>
+</body>
+
+
+
+
+
+
+</html>
