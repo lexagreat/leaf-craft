@@ -898,6 +898,9 @@
          width: 100%;
          height: 443px;
          object-fit: cover;
+         @media (max-width: $mobile) {
+            height: 212px;
+         }
       }
    }
 
@@ -1084,9 +1087,9 @@
    }
 }
 .author-aside {
-   position: sticky;
-   top: var(--header);
-   height: fit-content;
+   // position: sticky;
+   // top: var(--header);
+   // height: fit-content;
    display: flex;
    flex-direction: column;
    gap: 28px;
@@ -1510,6 +1513,7 @@
       }
       input {
          padding-right: 56px;
+         border-radius: 12px;
       }
    }
 
@@ -1518,7 +1522,7 @@
    &__banner {
       background: linear-gradient(94.81deg, #9d749e -1.43%, #b597b6 126.29%);
       padding: 32px;
-      border-radius: 8px;
+      border-radius: 12px;
       display: flex;
       flex-direction: column;
       gap: 50px;
@@ -1868,7 +1872,7 @@
    // .article-reviews__aside
 
    &__aside {
-      flex: 0 0 468px;
+      flex: 0 0 460px;
       @media (max-width: $tablet) {
          flex: unset;
       }
@@ -2049,13 +2053,23 @@
       flex-direction: column;
       gap: 32px;
    }
-
+   &__link {
+      color: #5867a8;
+      text-decoration: underline;
+      transition: 0.3s;
+      @media (hover: hover) {
+         &:hover {
+            font-weight: 700;
+         }
+      }
+   }
    // .article-content__block
 
    &__block {
       display: flex;
       flex-direction: column;
       gap: 20px;
+
       @media (max-width: $mobile) {
          gap: 16px;
       }
@@ -2225,6 +2239,7 @@
    // .article-footer__row
 
    &__row {
+      padding-right: 5px;
       margin: 32px 0px;
       display: flex;
       justify-content: space-between;
@@ -2462,6 +2477,137 @@
          }
          &.swiper-slide-thumb-active {
             opacity: 1;
+         }
+      }
+   }
+}
+.article-sticky {
+   display: flex;
+   flex-direction: column;
+   background: var(--Accent-accent-2, #6d7fce);
+   border-radius: 8px;
+   padding: 32px;
+   position: sticky;
+   top: var(--header);
+   height: fit-content;
+   overflow: hidden;
+   & > * {
+      position: relative;
+      z-index: 2;
+   }
+   & > img {
+      position: absolute;
+      left: 30px;
+      top: -75px;
+   }
+
+   .body-text {
+      margin-top: 16px;
+      margin-bottom: 32px;
+      color: white;
+      opacity: 0.6;
+   }
+   .h4 {
+      color: white;
+   }
+
+   .btn {
+      width: fit-content;
+      padding: 0 24px;
+      background-color: #ffe4aa;
+      color: #323137;
+      img {
+         rotate: -90deg;
+      }
+   }
+}
+.article-reviews {
+   // .article-reviews__author
+
+   &__author {
+      background-color: #f5f6f8;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: fit-content;
+      position: sticky;
+      top: var(--header);
+   }
+
+   // .article-reviews__author-header
+
+   &__author-header {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #dcdcde;
+      @media (max-width: $mobile) {
+         gap: 12px;
+      }
+      .circle {
+         overflow: hidden;
+         --size: 60px;
+         @media (max-width: $mobile) {
+            --size: 43px;
+         }
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      p {
+         display: flex;
+         flex-direction: column;
+         .body-text {
+            font-weight: 700;
+            margin-top: 4px;
+            margin-bottom: 12px;
+         }
+         span.caption {
+            color: #323137;
+            opacity: 0.6;
+         }
+         a {
+            color: #9d749e;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            span {
+               text-decoration: underline;
+            }
+            @media (max-width: $mobile) {
+               font-weight: 700;
+               font-size: 14px;
+               line-height: 16px;
+            }
+         }
+      }
+   }
+
+   // .article-reviews__author-main
+
+   &__author-main {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      ul {
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+         a {
+            color: #9d749e;
+            display: flex;
+            align-items: center;
+            text-decoration: underline;
+            font-weight: 700;
+            @media (max-width: $mobile) {
+               font-weight: 700;
+               font-size: 14px;
+               line-height: 16px;
+            }
          }
       }
    }

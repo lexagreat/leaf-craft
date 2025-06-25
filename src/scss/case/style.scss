@@ -1820,3 +1820,26 @@
       width: fit-content;
    }
 }
+.cases-page__links {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 34px;
+   .btn {
+      padding: 0 24px;
+      width: fit-content;
+      height: 48px;
+   }
+   @media (max-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      .btn {
+         width: 100%;
+      }
+   }
+   @media (max-width: $mobile) {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+   }
+}

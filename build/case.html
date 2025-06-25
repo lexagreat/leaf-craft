@@ -26,6 +26,10 @@
 </style>
 
 <body>
+   <script src="https://unpkg.com/imask"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/app.js"></script>
    <div class="wrapper">
       <header class="header">
    <div class="container">
@@ -514,6 +518,57 @@
                                           </ul>
                                        </div>
                                        <canvas id="myChart0"></canvas>
+                                       <script>
+                                          let testopts1 = {
+                                             type: 'line',
+                                             data: {
+                                                labels: ['March 14', 'May 14', 'July 14', 'Sep 14', 'Jan 14'],
+                                                datasets: [{
+                                                   // label: 'My First Dataset',
+                                                   data: [0, 160, 130, 250, 500],
+                                                   fill: false,
+                                                   borderColor: '#8A99D8',
+                                                   tension: 0.4,
+
+                                                   pointRadius: 0 // Убираем точки
+                                                }, {
+                                                   // label: 'My First Dataset',
+                                                   data: [0, 120, 130, 50, 450],
+                                                   fill: false,
+                                                   borderColor: '#9AE1A0',
+                                                   tension: 0.4,
+
+                                                   pointRadius: 0 // Убираем точки
+                                                },]
+                                             },
+                                             options: {
+                                                plugins: {
+                                                   legend: {
+                                                      display: false // Отключает отображение легенды
+                                                   }
+                                                },
+                                                responsive: true,
+                                                scales: {
+                                                   x: {
+                                                      type: 'category',
+                                                      ticks: {
+                                                         autoSkip: true,
+                                                      }
+                                                   },
+                                                   y: {
+                                                      beginAtZero: true,
+                                                      ticks: {
+                                                         // maxTicksLimit: 4,
+                                                         stepSize: 100, // Устанавливаем шаг между делениями
+                                                      }
+                                                   }
+
+                                                },
+                                             }
+                                          }
+
+                                          new Chart(document.getElementById('myChart0'), testopts1);
+                                       </script>
                                     </div>
                                  </div>
                                  <div class="swiper-slide">
@@ -1338,6 +1393,124 @@
                            </ul>
                         </div>
                         <canvas id="result1"></canvas>
+                        <script>
+                           let result1opts = {
+                              type: 'line',
+                              data: {
+                                 labels: ['March 14', 'May 14', 'July 14', 'Sep 14', 'Jan 14'],
+                                 datasets: [
+                                    {
+                                       data: [0, 160, 130, 250, 500],
+                                       fill: false,
+                                       borderColor: '#8A99D8',
+                                       tension: 0.4,
+                                       pointRadius: 2,
+                                    },
+                                    {
+                                       data: [0, 120, 130, 50, 450],
+                                       fill: false,
+                                       borderColor: '#9AE1A0',
+                                       tension: 0.4,
+                                       pointRadius: 2,
+                                    },
+                                 ],
+                              },
+                              options: {
+                                 plugins: {
+                                    legend: {
+                                       display: false, // Отключает отображение легенды
+                                    },
+                                    tooltip: {
+                                       enabled: false, // Отключаем стандартный tooltip
+                                       external: function (context) {
+                                          // Кастомный tooltip
+                                          let tooltipEl = document.getElementById('chartjs-tooltip');
+
+                                          // Создаем элемент tooltip, если его еще нет
+                                          if (!tooltipEl) {
+                                             tooltipEl = document.createElement('div');
+                                             tooltipEl.id = 'chartjs-tooltip';
+                                             tooltipEl.style.position = 'absolute';
+                                             tooltipEl.style.zIndex = 222;
+                                             tooltipEl.style.background = 'white';
+                                             tooltipEl.style.border = '1px solid #ccc';
+                                             tooltipEl.style.borderRadius = '8px';
+                                             tooltipEl.style.padding = '10px';
+                                             tooltipEl.style.pointerEvents = 'none';
+                                             tooltipEl.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.1)';
+                                             document.body.appendChild(tooltipEl);
+                                          }
+
+                                          // Скрываем tooltip, если нет данных
+                                          const tooltipModel = context.tooltip;
+                                          if (tooltipModel.opacity === 0) {
+                                             tooltipEl.style.opacity = 0;
+                                             return;
+                                          }
+
+                                          // Устанавливаем содержимое tooltip
+                                          if (tooltipModel.body) {
+                                             const title = tooltipModel.title[0];
+                                             const body = tooltipModel.body.map(item => item.lines);
+
+                                             tooltipEl.innerHTML = `
+              <div style="font-size: 12px; font-weight: bold; margin-bottom: 8px;">${title}</div>
+              <div style="width: 196px;justify-content:space-between;display: flex; align-items: center; margin-bottom: 4px;">
+                <span style="width: 10px; height: 10px; background: ${tooltipModel.labelColors[0].borderColor}; border-radius: 50%;"></span>
+                <span style="
+font-weight: 600;
+font-size: 12px;
+line-height: 130%;
+letter-spacing: 0%;
+vertical-align: middle;
+">Middle position:</span>
+                <span style="
+font-weight: 600;
+font-size: 12px;
+line-height: 130%;
+letter-spacing: 0%;
+vertical-align: middle;
+">${body[0]}</span>
+              </div>
+              <div style="font-size: 12px; color: #888;display:flex;justify-content:space-between;padding-top: 4px;border-top: 1px solid var(--input-stroke-dark, #DCDCDE)"><span>Traffic:</span> <span>600 326</span></div>
+            `;
+                                          }
+
+                                          // Позиционируем tooltip
+                                          const position = context.chart.canvas.getBoundingClientRect();
+                                          tooltipEl.style.opacity = 1;
+                                          tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                                          tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                                       },
+                                    },
+                                 },
+                                 responsive: true,
+                                 scales: {
+                                    x: {
+                                       type: 'category',
+                                       ticks: {
+                                          autoSkip: true,
+                                          color: '#F5F6F8', // Цвет текста меток на оси Y
+                                       },
+                                       grid: {
+                                          color: 'rgba(128, 159, 184, 0.2)', // Цвет горизонтальных линий сетки
+                                       }
+                                    },
+                                    y: {
+                                       beginAtZero: true,
+                                       ticks: {
+                                          stepSize: 100, // Устанавливаем шаг между делениями
+                                          color: '#F5F6F8', // Цвет текста меток на оси Y
+                                       },
+                                       grid: {
+                                          color: '#F5F6F8' // Цвет горизонтальных линий сетки
+                                       }
+                                    },
+                                 },
+                              },
+                           };
+                           new Chart(document.getElementById('result1'), result1opts);
+                        </script>
                      </div>
                      <div class="case-stats">
                         <div class="case-stats__header">
@@ -1363,6 +1536,105 @@
 
                         </div>
                         <canvas id="result2"></canvas>
+                        <script>
+                           let result2opts = {
+                              type: 'bar',
+                              data: {
+                                 labels: Array.from({ length: 10 }, (_, i) => `Label ${i + 1}`), // Создаем 10 меток
+                                 datasets: [
+                                    {
+                                       label: 'Organic Traffic',
+                                       data: Array.from({ length: 10 }, () => Math.floor(Math.random() * 25000)), // Генерируем случайные данные
+                                       backgroundColor: '#8571F4', // Нижний слой
+                                       borderWidth: 0,
+                                       barThickness: window.innerWidth > 568 ? 15 : 5, // Устанавливаем фиксированную ширину баров
+                                    },
+                                 ]
+                              },
+                              options: {
+                                 plugins: {
+                                    legend: {
+                                       display: false // Скрываем легенду
+                                    },
+                                    tooltip: {
+                                       enabled: false, // Отключаем стандартный tooltip
+                                       external: function (context) {
+                                          // Кастомный tooltip
+                                          let tooltipEl = document.getElementById('chartjs-tooltip');
+
+                                          // Создаем элемент tooltip, если его еще нет
+                                          if (!tooltipEl) {
+                                             tooltipEl = document.createElement('div');
+                                             tooltipEl.id = 'chartjs-tooltip';
+                                             tooltipEl.style.position = 'absolute';
+                                             tooltipEl.style.zIndex = 222;
+                                             tooltipEl.style.background = 'white';
+                                             tooltipEl.style.border = '1px solid #ccc';
+                                             tooltipEl.style.borderRadius = '8px';
+                                             tooltipEl.style.padding = '10px';
+                                             tooltipEl.style.pointerEvents = 'none';
+                                             tooltipEl.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.1)';
+                                             document.body.appendChild(tooltipEl);
+                                          }
+
+                                          // Скрываем tooltip, если нет данных
+                                          const tooltipModel = context.tooltip;
+                                          if (tooltipModel.opacity === 0) {
+                                             tooltipEl.style.opacity = 0;
+                                             return;
+                                          }
+
+                                          // Устанавливаем содержимое tooltip
+                                          if (tooltipModel.body) {
+                                             const title = tooltipModel.title[0];
+                                             const body = tooltipModel.body.map(item => item.lines);
+
+                                             tooltipEl.innerHTML = `
+              <div style="font-size: 12px; font-weight: bold; margin-bottom: 8px;">${title}</div>
+             
+              <div style="font-size: 12px; color: #323137;display:flex;justify-content:space-between;padding-top: 4px;border-top: 1px solid var(--input-stroke-dark, #DCDCDE)">38 leads</div>
+            `;
+                                          }
+
+                                          // Позиционируем tooltip
+                                          const position = context.chart.canvas.getBoundingClientRect();
+                                          tooltipEl.style.opacity = 1;
+                                          tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                                          tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                                       },
+                                    },
+                                 },
+                                 responsive: true,
+
+                                 scales: {
+                                    x: {
+                                       type: 'category',
+                                       ticks: {
+                                          autoSkip: true,
+                                          color: '#F5F6F8', // Цвет текста меток на оси Y
+                                       },
+                                       grid: {
+                                          color: 'rgba(128, 159, 184, 0.2)', // Цвет горизонтальных линий сетки
+                                       }
+                                    },
+                                    y: {
+                                       beginAtZero: true,
+                                       ticks: {
+                                          stepSize: 100, // Устанавливаем шаг между делениями
+                                          color: '#F5F6F8', // Цвет текста меток на оси Y
+                                       },
+                                       grid: {
+                                          color: '#F5F6F8' // Цвет горизонтальных линий сетки
+                                       }
+                                    },
+                                 },
+                              }
+                           };
+
+
+                           new Chart(document.getElementById('result2'), result2opts);
+
+                        </script>
                      </div>
                      <div class="case-stats">
                         <div class="case-stats__header">
@@ -2365,10 +2637,6 @@
 </footer>
 
    </div>
-   <script src="https://unpkg.com/imask"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="js/app.js"></script>
    <script>
       new Swiper(".case-card__main .swiper", {
          slidesPerView: 1,
@@ -2379,219 +2647,9 @@
             el: ".case-card__main .swiper-pagination"
          }
       })
-      let opts = {
-         type: 'line',
-         data: {
-            labels: ['March 14', 'May 14', 'July 14', 'Sep 14', 'Jan 14'],
-            datasets: [
-               {
-                  data: [0, 160, 130, 250, 500],
-                  fill: false,
-                  borderColor: '#8A99D8',
-                  tension: 0.4,
-                  pointRadius: 2,
-               },
-               {
-                  data: [0, 120, 130, 50, 450],
-                  fill: false,
-                  borderColor: '#9AE1A0',
-                  tension: 0.4,
-                  pointRadius: 2,
-               },
-            ],
-         },
-         options: {
-            plugins: {
-               legend: {
-                  display: false, // Отключает отображение легенды
-               },
-               tooltip: {
-                  enabled: false, // Отключаем стандартный tooltip
-                  external: function (context) {
-                     // Кастомный tooltip
-                     let tooltipEl = document.getElementById('chartjs-tooltip');
-
-                     // Создаем элемент tooltip, если его еще нет
-                     if (!tooltipEl) {
-                        tooltipEl = document.createElement('div');
-                        tooltipEl.id = 'chartjs-tooltip';
-                        tooltipEl.style.position = 'absolute';
-                        tooltipEl.style.zIndex = 222;
-                        tooltipEl.style.background = 'white';
-                        tooltipEl.style.border = '1px solid #ccc';
-                        tooltipEl.style.borderRadius = '8px';
-                        tooltipEl.style.padding = '10px';
-                        tooltipEl.style.pointerEvents = 'none';
-                        tooltipEl.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.1)';
-                        document.body.appendChild(tooltipEl);
-                     }
-
-                     // Скрываем tooltip, если нет данных
-                     const tooltipModel = context.tooltip;
-                     if (tooltipModel.opacity === 0) {
-                        tooltipEl.style.opacity = 0;
-                        return;
-                     }
-
-                     // Устанавливаем содержимое tooltip
-                     if (tooltipModel.body) {
-                        const title = tooltipModel.title[0];
-                        const body = tooltipModel.body.map(item => item.lines);
-
-                        tooltipEl.innerHTML = `
-              <div style="font-size: 12px; font-weight: bold; margin-bottom: 8px;">${title}</div>
-              <div style="width: 196px;justify-content:space-between;display: flex; align-items: center; margin-bottom: 4px;">
-                <span style="width: 10px; height: 10px; background: ${tooltipModel.labelColors[0].borderColor}; border-radius: 50%;"></span>
-                <span style="
-font-weight: 600;
-font-size: 12px;
-line-height: 130%;
-letter-spacing: 0%;
-vertical-align: middle;
-">Middle position:</span>
-                <span style="
-font-weight: 600;
-font-size: 12px;
-line-height: 130%;
-letter-spacing: 0%;
-vertical-align: middle;
-">${body[0]}</span>
-              </div>
-              <div style="font-size: 12px; color: #888;display:flex;justify-content:space-between;padding-top: 4px;border-top: 1px solid var(--input-stroke-dark, #DCDCDE)"><span>Traffic:</span> <span>600 326</span></div>
-            `;
-                     }
-
-                     // Позиционируем tooltip
-                     const position = context.chart.canvas.getBoundingClientRect();
-                     tooltipEl.style.opacity = 1;
-                     tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
-                     tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
-                  },
-               },
-            },
-            responsive: true,
-            scales: {
-               x: {
-                  type: 'category',
-                  ticks: {
-                     autoSkip: true,
-                     color: '#F5F6F8', // Цвет текста меток на оси Y
-                  },
-                  grid: {
-                     color: 'rgba(128, 159, 184, 0.2)', // Цвет горизонтальных линий сетки
-                  }
-               },
-               y: {
-                  beginAtZero: true,
-                  ticks: {
-                     stepSize: 100, // Устанавливаем шаг между делениями
-                     color: '#F5F6F8', // Цвет текста меток на оси Y
-                  },
-                  grid: {
-                     color: '#F5F6F8' // Цвет горизонтальных линий сетки
-                  }
-               },
-            },
-         },
-      };
 
 
-      let optimOpts1 = {
-         type: 'bar',
-         data: {
-            labels: Array.from({ length: 10 }, (_, i) => `Label ${i + 1}`), // Создаем 10 меток
-            datasets: [
-               {
-                  label: 'Organic Traffic',
-                  data: Array.from({ length: 10 }, () => Math.floor(Math.random() * 25000)), // Генерируем случайные данные
-                  backgroundColor: '#8571F4', // Нижний слой
-                  borderWidth: 0,
-                  barThickness: window.innerWidth > 568 ? 15 : 5, // Устанавливаем фиксированную ширину баров
-               },
-            ]
-         },
-         options: {
-            plugins: {
-               legend: {
-                  display: false // Скрываем легенду
-               },
-               tooltip: {
-                  enabled: false, // Отключаем стандартный tooltip
-                  external: function (context) {
-                     // Кастомный tooltip
-                     let tooltipEl = document.getElementById('chartjs-tooltip');
 
-                     // Создаем элемент tooltip, если его еще нет
-                     if (!tooltipEl) {
-                        tooltipEl = document.createElement('div');
-                        tooltipEl.id = 'chartjs-tooltip';
-                        tooltipEl.style.position = 'absolute';
-                        tooltipEl.style.zIndex = 222;
-                        tooltipEl.style.background = 'white';
-                        tooltipEl.style.border = '1px solid #ccc';
-                        tooltipEl.style.borderRadius = '8px';
-                        tooltipEl.style.padding = '10px';
-                        tooltipEl.style.pointerEvents = 'none';
-                        tooltipEl.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.1)';
-                        document.body.appendChild(tooltipEl);
-                     }
-
-                     // Скрываем tooltip, если нет данных
-                     const tooltipModel = context.tooltip;
-                     if (tooltipModel.opacity === 0) {
-                        tooltipEl.style.opacity = 0;
-                        return;
-                     }
-
-                     // Устанавливаем содержимое tooltip
-                     if (tooltipModel.body) {
-                        const title = tooltipModel.title[0];
-                        const body = tooltipModel.body.map(item => item.lines);
-
-                        tooltipEl.innerHTML = `
-              <div style="font-size: 12px; font-weight: bold; margin-bottom: 8px;">${title}</div>
-             
-              <div style="font-size: 12px; color: #323137;display:flex;justify-content:space-between;padding-top: 4px;border-top: 1px solid var(--input-stroke-dark, #DCDCDE)">38 leads</div>
-            `;
-                     }
-
-                     // Позиционируем tooltip
-                     const position = context.chart.canvas.getBoundingClientRect();
-                     tooltipEl.style.opacity = 1;
-                     tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
-                     tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
-                  },
-               },
-            },
-            responsive: true,
-
-            scales: {
-               x: {
-                  type: 'category',
-                  ticks: {
-                     autoSkip: true,
-                     color: '#F5F6F8', // Цвет текста меток на оси Y
-                  },
-                  grid: {
-                     color: 'rgba(128, 159, 184, 0.2)', // Цвет горизонтальных линий сетки
-                  }
-               },
-               y: {
-                  beginAtZero: true,
-                  ticks: {
-                     stepSize: 100, // Устанавливаем шаг между делениями
-                     color: '#F5F6F8', // Цвет текста меток на оси Y
-                  },
-                  grid: {
-                     color: '#F5F6F8' // Цвет горизонтальных линий сетки
-                  }
-               },
-            },
-         }
-      };
-      new Chart(document.getElementById('myChart0'), opts);
-      new Chart(document.getElementById('result1'), opts);
-      new Chart(document.getElementById('result2'), optimOpts1);
 
    </script>
 </body>

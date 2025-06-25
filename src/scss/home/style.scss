@@ -142,6 +142,8 @@
       margin: 0 auto;
       width: fit-content;
       text-align: center;
+      font-size: 24px;
+      color: #595959;
    }
    .marquee {
       --duration: 22s;
@@ -693,7 +695,9 @@
       margin-bottom: 12px;
       display: block;
       font-weight: 700;
-      color: #323137;
+      color: #5867a8;
+      border-bottom: 0 !important;
+      text-decoration: none !important;
       @media (max-width: $mobile) {
          min-height: 24px;
          margin: 12px 0;
@@ -1106,6 +1110,20 @@
       }
    }
 }
+.case-nda {
+   z-index: 20;
+   display: flex;
+   gap: 7px;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 98%;
+   background: #ffffff78;
+   backdrop-filter: blur(10px);
+}
 .case-table {
    display: flex;
    flex-direction: column;
@@ -1210,7 +1228,13 @@
    // .case-review__avatar
 
    &__avatar {
+      overflow: hidden;
       --size: 60px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
    }
 
    // .case-review__info
@@ -1623,9 +1647,15 @@
    // .home-optimize__content
 
    &__content {
+      flex: 1;
+      [data-tab] {
+         height: 100%;
+      }
    }
 }
 .optimize-content {
+   height: 100%;
+   flex: 1;
    padding: 32px;
    padding-bottom: 0;
    display: flex;
@@ -1686,6 +1716,7 @@
    // .optimize-content__graph
 
    &__graph {
+      height: 100%;
       // padding: 20px;
       // padding-bottom: 0;
       border: 20px solid #cbfacf;
@@ -1694,17 +1725,20 @@
       padding: 0 40px;
       position: relative;
       padding-top: 20px;
-
+      display: flex;
+      justify-content: center;
       @media (max-width: $mobile) {
          padding: 0 15px;
          border: 8px solid #cbfacf;
          border-bottom: 0;
       }
       canvas {
-         width: 100% !important;
-         height: 200px !important;
+         // width: 100% !important;
+         // height: 200px !important;
+         max-width: 100%;
+         max-height: 302px;
          @media (max-width: $mobile) {
-            height: 80px !important;
+            // height: 80px !important;
          }
       }
 
@@ -1714,8 +1748,8 @@
          position: absolute;
          &:nth-child(1) {
             rotate: -90deg;
-            top: 100px;
             left: -100px;
+            top: 45%;
             translate: 50%;
             @media (max-width: $mobile) {
                display: none;
@@ -1723,11 +1757,12 @@
          }
          &:nth-child(2) {
             rotate: 90deg;
-            top: 90px;
+
+            top: 45%;
             right: -10px;
             @media (max-width: $mobile) {
                font-size: 4px;
-               top: 33px;
+               // top: 33px;
                right: 0px;
             }
          }
@@ -2363,8 +2398,103 @@
 @media (max-width: $mobile) {
    .cases-section__title::after {
       width: 230px !important;
-      height: 9px !important;
+      height: 13px !important;
       background: url(../img/home/cases-title-underline.svg) center / 100% 100%
          no-repeat;
+   }
+}
+.donut-label {
+   position: absolute;
+   width: fit-content;
+   @include caption-mobile;
+   @media (max-width: $mobile) {
+      font-size: 5px;
+   }
+   &:nth-child(1) {
+      top: 40px;
+      left: 180px;
+      span {
+         translate: -40px 50%;
+         display: block;
+      }
+      &::after {
+         content: "";
+         display: block;
+         width: 92px;
+         height: 36px;
+         background: url(../img/home/donut/1.svg) center / contain no-repeat;
+      }
+      @media (max-width: $tablet) {
+         left: 140px;
+      }
+      @media (max-width: $mobile) {
+         top: 0;
+         left: 120px;
+         &::after {
+            width: 29px;
+            height: 14px;
+         }
+         span {
+            translate: -23px 50%;
+         }
+      }
+   }
+   &:nth-child(2) {
+      top: 50px;
+      right: 140px;
+      display: flex;
+
+      span {
+         translate: 10px -10%;
+         display: block;
+      }
+      &::before {
+         content: "";
+         display: block;
+         width: 65px;
+         height: 45px;
+         background: url(../img/home/donut/2.svg) center / contain no-repeat;
+      }
+      @media (max-width: $mobile) {
+         top: 10px;
+         right: 90px;
+         &::before {
+            width: 25px;
+            height: 17px;
+         }
+         span {
+            translate: 3px -45%;
+         }
+      }
+   }
+   &:nth-child(3) {
+      bottom: 30px;
+      left: 190px;
+      display: flex;
+      span {
+         translate: 10px -40%;
+         display: block;
+      }
+      &::after {
+         content: "";
+         display: block;
+         width: 65px;
+         height: 1px;
+         background: url(../img/home/donut/3.svg) center / contain no-repeat;
+      }
+      @media (max-width: $tablet) {
+         left: 160px;
+      }
+      @media (max-width: $mobile) {
+         left: 110px;
+         bottom: 0;
+         &::after {
+            width: 24px;
+            height: 1px;
+         }
+         span {
+            translate: 0px -50%;
+         }
+      }
    }
 }
